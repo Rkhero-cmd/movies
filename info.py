@@ -15,18 +15,18 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '29480176'))
 API_HASH = environ.get('API_HASH', '62d6d33cee74fcee747ed5386a93c9e1')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7654188497:AAEmxj-mIGQDHeAvwBvhF1jM0DMZ35YI6lA')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7597738305:AAGYIBeJR5_QWwqeQwigcQXt5Edv22qjZU0')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1008042264').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/Rkhero0001") # ADMIN USERNAME
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002288852279'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002509245710'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+K2kgCBgaat80YWQ9')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002454954253').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002615751131').split()]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rkhero2323: rkhero2323@rk.ccls1.mongodb.net/?retryWrites=true&w=majority&appName=Rk")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Rk")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Rkhero0001:Rkhero0001@manpreet.bndef.mongodb.net/?retryWrites=true&w=majority&appName=Manpreet")
+DATABASE_NAME = environ.get('DATABASE_NAME', "manpreet")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
