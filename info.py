@@ -2,6 +2,12 @@ import re
 from os import environ,getenv
 from Script import script
 from plugins.info import SUPPORT_CHAT, LOG_CHANNEL
+# database/ia_filterdb.py
+from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, MAX_BTN
+
+def get_media():
+    from database.ia_filterdb import Media
+    return Media
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
