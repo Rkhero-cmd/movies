@@ -1,6 +1,7 @@
 import re
 from os import environ,getenv
 from Script import script
+from plugins.info import SUPPORT_CHAT, LOG_CHANNEL
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -39,6 +40,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '')
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '0'))
 request_channel = environ.get('REQUEST_CHANNEL', '0')
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '0'))
+
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 IS_VERIFY = is_enabled('IS_VERIFY', True)
