@@ -15,8 +15,10 @@ def is_enabled(value, default):
 from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, MAX_BTN
 
 def get_media():
-    from database.ia_filterdb import Media
-    return Media
+    from info import get_media
+
+Media = get_media()
+
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '29480176'))
 API_HASH = environ.get('API_HASH', '62d6d33cee74fcee747ed5386a93c9e1')
