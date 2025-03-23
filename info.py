@@ -2,12 +2,6 @@ import re
 from os import environ,getenv
 from Script import script
 from plugins.info import SUPPORT_CHAT, LOG_CHANNEL
-from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, MAX_BTN
-
-def get_media():
-    from database.ia_filterdb import Media
-    return Media
-
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
     if value.lower() in ["true", "yes", "1", "enable", "y"]:
@@ -18,6 +12,11 @@ def is_enabled(value, default):
         return default
 #---------------------------------------------------------------
 #---------------------------------------------------------------         ,
+from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, MAX_BTN
+
+def get_media():
+    from database.ia_filterdb import Media
+    return Media
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '29480176'))
 API_HASH = environ.get('API_HASH', '62d6d33cee74fcee747ed5386a93c9e1')
@@ -27,7 +26,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '7597738305:AAGYIBeJR5_QWwqeQwigcQXt5Edv22q
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1008042264').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/Rkhero0001") # ADMIN USERNAME
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002509245710'))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+K2kgCBgaat80YWQ9')
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/talk2movielink')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002615751131').split()]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
